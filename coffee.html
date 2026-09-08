@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="Bean Boutique Coffee Shop — artisan coffee, brewing equipment, events and subscriptions.">
+
+    <title>Coffee Selection | Bean Boutique</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/starability/2.4.2/starability-minified/starability-basic.min.css">
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+
+            <a class="logo" href="index.html">
+                Bean <span>Boutique</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a class="active" href="coffee.html">Coffee</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="events.html">Events</a>
+                <a href="offers.html">Offers</a>
+                <a href="cart.html">
+                    Cart <span class="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+
+    <section class="page-hero">
+        <div class="container">
+
+            <span class="eyebrow">Coffee selection</span>
+
+            <h1>Find your next favourite cup.</h1>
+
+            <p>
+                Browse blends and single-origin coffees with tasting notes
+                and recommended brewing methods.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container">
+
+            <div class="toolbar">
+
+                <div>
+                    <h2>Our catalogue</h2>
+
+                    <p>
+                        Use the search box to filter products.
+                    </p>
+                </div>
+
+                <input id="coffee-search" class="search" type="search"
+                    placeholder="Search by coffee name, roast or flavour..." aria-label="Search coffee">
+
+            </div>
+
+
+
+            <div id="coffee-grid" class="grid grid-3">
+
+
+                <article class="card" data-name="house blend chocolate caramel">
+
+                    <img src="images/image.png" alt="House Blend">
+
+                    <div class="card-body">
+
+                        <span class="tag">Blend</span>
+
+                        <h3>House Blend</h3>
+
+                        <p>
+                            Chocolate, caramel and toasted nuts.
+                        </p>
+
+                        <p>
+                            Best with espresso or French press.
+                        </p>
+
+                        <p class="price">
+                            $14 / 250g
+                        </p>
+                        <fieldset class="starability-basic">
+                            <legend>Rate House Blend</legend>
+
+                            <input type="radio" id="house-rate1" name="house-rating" value="1">
+                            <label for="house-rate1" title="1 star">1 star</label>
+
+                            <input type="radio" id="house-rate2" name="house-rating" value="2">
+                            <label for="house-rate2" title="2 stars">2 stars</label>
+
+                            <input type="radio" id="house-rate3" name="house-rating" value="3">
+                            <label for="house-rate3" title="3 stars">3 stars</label>
+
+                            <input type="radio" id="house-rate4" name="house-rating" value="4">
+                            <label for="house-rate4" title="4 stars">4 stars</label>
+
+                            <input type="radio" id="house-rate5" name="house-rating" value="5">
+                            <label for="house-rate5" title="5 stars">5 stars</label>
+                        </fieldset>
+                        <button class="wishlist-btn" type="button" data-id="house-blend"
+                            onclick="toggleWishlist('house-blend')">
+                            ♡ Add to Wishlist
+                        </button>
+                        <button class="btn" type="button" onclick="addToCart('house-blend')">
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="card" data-name="ethiopia yirgacheffe floral citrus">
+
+                    <img src="images/image_copy.png" alt="Ethiopia Yirgacheffe">
+
+                    <div class="card-body">
+
+                        <span class="tag">Single origin</span>
+
+                        <h3>Ethiopia Yirgacheffe</h3>
+
+                        <p>
+                            Floral aroma with citrus and berry notes.
+                        </p>
+
+                        <p>
+                            Best with pour-over.
+                        </p>
+
+                        <p class="price">
+                            $17 / 250g
+                        </p>
+                        <fieldset class="starability-basic">
+                            <legend>Rate Ethiopia Yirgacheffe</legend>
+
+                            <input type="radio" id="ethiopia-rate1" name="ethiopia-rating" value="1">
+                            <label for="ethiopia-rate1" title="1 star">1 star</label>
+
+                            <input type="radio" id="ethiopia-rate2" name="ethiopia-rating" value="2">
+                            <label for="ethiopia-rate2" title="2 stars">2 stars</label>
+
+                            <input type="radio" id="ethiopia-rate3" name="ethiopia-rating" value="3">
+                            <label for="ethiopia-rate3" title="3 stars">3 stars</label>
+
+                            <input type="radio" id="ethiopia-rate4" name="ethiopia-rating" value="4">
+                            <label for="ethiopia-rate4" title="4 stars">4 stars</label>
+
+                            <input type="radio" id="ethiopia-rate5" name="ethiopia-rating" value="5">
+                            <label for="ethiopia-rate5" title="5 stars">5 stars</label>
+                        </fieldset>
+                        <button class="wishlist-btn" type="button" data-id="ethiopia"
+                            onclick="toggleWishlist('ethiopia')">
+                            ♡ Add to Wishlist
+                        </button>
+                        <button class="btn" type="button" onclick="addToCart('ethiopia')">
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="card" data-name="colombia honey cocoa brown sugar">
+
+                    <img src="images/image_copy_2.png" alt="Colombia Honey">
+
+                    <div class="card-body">
+
+                        <span class="tag">Single origin</span>
+
+                        <h3>Colombia Honey</h3>
+
+                        <p>
+                            Cocoa, brown sugar and gentle stone fruit.
+                        </p>
+
+                        <p>
+                            Best with Aeropress or pour-over.
+                        </p>
+
+                        <p class="price">
+                            $16 / 250g
+                        </p>
+                        <fieldset class="starability-basic">
+                            <legend>Rate Colombia Honey</legend>
+
+                            <input type="radio" id="colombia-rate1" name="colombia-rating" value="1">
+                            <label for="colombia-rate1" title="1 star">1 star</label>
+
+                            <input type="radio" id="colombia-rate2" name="colombia-rating" value="2">
+                            <label for="colombia-rate2" title="2 stars">2 stars</label>
+
+                            <input type="radio" id="colombia-rate3" name="colombia-rating" value="3">
+                            <label for="colombia-rate3" title="3 stars">3 stars</label>
+
+                            <input type="radio" id="colombia-rate4" name="colombia-rating" value="4">
+                            <label for="colombia-rate4" title="4 stars">4 stars</label>
+
+                            <input type="radio" id="colombia-rate5" name="colombia-rating" value="5">
+                            <label for="colombia-rate5" title="5 stars">5 stars</label>
+                        </fieldset>
+                        <button class="wishlist-btn" type="button" data-id="colombia"
+                            onclick="toggleWishlist('colombia')">
+                            ♡ Add to Wishlist
+                        </button>
+                        <button class="btn" type="button" onclick="addToCart('colombia')">
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="card" data-name="dark roast espresso smoky chocolate">
+
+                    <img src="images/image_copy_3.png" alt="Midnight Espresso">
+
+                    <div class="card-body">
+
+                        <span class="tag">Dark roast</span>
+
+                        <h3>Midnight Espresso</h3>
+
+                        <p>
+                            Dark chocolate, molasses and a smoky finish. Best for espresso machines.
+                        </p>
+
+                        <p class="price">
+                            $15 / 250g
+                        </p>
+                        <fieldset class="starability-basic">
+                            <legend>Rate Midnight Espresso</legend>
+
+                            <input type="radio" id="midnight-rate1" name="midnight-rating" value="1">
+                            <label for="midnight-rate1" title="1 star">1 star</label>
+
+                            <input type="radio" id="midnight-rate2" name="midnight-rating" value="2">
+                            <label for="midnight-rate2" title="2 stars">2 stars</label>
+
+                            <input type="radio" id="midnight-rate3" name="midnight-rating" value="3">
+                            <label for="midnight-rate3" title="3 stars">3 stars</label>
+
+                            <input type="radio" id="midnight-rate4" name="midnight-rating" value="4">
+                            <label for="midnight-rate4" title="4 stars">4 stars</label>
+
+                            <input type="radio" id="midnight-rate5" name="midnight-rating" value="5">
+                            <label for="midnight-rate5" title="5 stars">5 stars</label>
+                        </fieldset>
+                        <button class="wishlist-btn" type="button" data-id="midnight"
+                            onclick="toggleWishlist('midnight')">
+                            ♡ Add to Wishlist
+                        </button>
+                        <button class="btn" type="button" onclick="addToCart('midnight')">
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="card" data-name="decaf cocoa caramel decaffeinated">
+
+                    <img src="images/image_copy_4.png" alt="Evening Decaf">
+
+                    <div class="card-body">
+
+                        <span class="tag">Decaf</span>
+
+                        <h3>Evening Decaf</h3>
+
+                        <p>
+                            Cocoa and caramel without the caffeine.
+                        </p>
+
+                        <p>
+                            Best with filter or French press.
+                        </p>
+
+                        <p class="price">
+                            $15 / 250g
+                        </p>
+                        <fieldset class="starability-basic">
+                            <legend>Rate Evening Decaf</legend>
+
+                            <input type="radio" id="decaf-rate1" name="decaf-rating" value="1">
+                            <label for="decaf-rate1" title="1 star">1 star</label>
+
+                            <input type="radio" id="decaf-rate2" name="decaf-rating" value="2">
+                            <label for="decaf-rate2" title="2 stars">2 stars</label>
+
+                            <input type="radio" id="decaf-rate3" name="decaf-rating" value="3">
+                            <label for="decaf-rate3" title="3 stars">3 stars</label>
+
+                            <input type="radio" id="decaf-rate4" name="decaf-rating" value="4">
+                            <label for="decaf-rate4" title="4 stars">4 stars</label>
+
+                            <input type="radio" id="decaf-rate5" name="decaf-rating" value="5">
+                            <label for="decaf-rate5" title="5 stars">5 stars</label>
+                        </fieldset>
+                        <button class="wishlist-btn" type="button" data-id="decaf" onclick="toggleWishlist('decaf')">
+                            ♡ Add to Wishlist
+                        </button>
+                        <button class="btn" type="button" onclick="addToCart('decaf')">
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="card" data-name="seasonal blend maple spice">
+
+                    <img src="images/image_copy_5.png" alt="Maple Spice">
+
+                    <div class="card-body">
+
+                        <span class="tag">Seasonal</span>
+
+                        <h3>Maple Spice</h3>
+
+                        <p>
+                            Sweet maple, baking spice and soft cocoa.
+                        </p>
+
+                        <p>
+                            Best with drip coffee.
+                        </p>
+
+                        <p class="price">
+                            $18 / 250g
+                        </p>
+                        <fieldset class="starability-basic">
+                            <legend>Rate Maple Spice</legend>
+
+                            <input type="radio" id="maple-rate1" name="maple-rating" value="1">
+                            <label for="maple-rate1" title="1 star">1 star</label>
+
+                            <input type="radio" id="maple-rate2" name="maple-rating" value="2">
+                            <label for="maple-rate2" title="2 stars">2 stars</label>
+
+                            <input type="radio" id="maple-rate3" name="maple-rating" value="3">
+                            <label for="maple-rate3" title="3 stars">3 stars</label>
+
+                            <input type="radio" id="maple-rate4" name="maple-rating" value="4">
+                            <label for="maple-rate4" title="4 stars">4 stars</label>
+
+                            <input type="radio" id="maple-rate5" name="maple-rating" value="5">
+                            <label for="maple-rate5" title="5 stars">5 stars</label>
+                        </fieldset>
+                        <button class="wishlist-btn" type="button" data-id="maple" onclick="toggleWishlist('maple')">
+                            ♡ Add to Wishlist
+                        </button>
+                        <button class="btn" type="button" onclick="addToCart('maple')">
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+            <section class="wishlist-section">
+                <div class="wishlist-header">
+                    <div>
+                        <span class="eyebrow">Your favourites</span>
+                        <h2>My Wishlist ❤️</h2>
+                        <p>Save coffees you would like to try later.</p>
+                    </div>
+
+                    <button class="clear-wishlist" type="button" onclick="clearWishlist()">
+                        Clear Wishlist
+                    </button>
+                </div>
+
+                <div id="wishlist-items" class="wishlist-items">
+                    <p class="wishlist-empty">
+                        Your wishlist is empty. Add a coffee you love!
+                    </p>
+                </div>
+            </section>
+
+            <p id="search-empty" class="notice" hidden>
+                No coffees match your search.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>Bean Boutique</h3>
+
+                    <p>
+                        Small-batch coffee, thoughtful equipment
+                        and welcoming community events.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>Explore</h3>
+
+                    <p>
+                        <a href="coffee.html">
+                            Coffee Selection
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="equipment.html">
+                            Brewing Equipment
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="events.html">
+                            Events
+                        </a>
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>Contact</h3>
+
+                    <p>21 Roast Street</p>
+                    <p>Yangon, Myanmar</p>
+
+                    <p>
+                        <a href="mailto:hello@beanboutique.com">
+                            hello@beanboutique.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Bean Boutique
+                </span>
+
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

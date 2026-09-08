@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="Bean Boutique Coffee Shop — artisan coffee, brewing equipment, events and subscriptions.">
+
+    <title>Shopping Cart | Bean Boutique</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+
+            <a class="logo" href="index.html">
+                Bean <span>Boutique</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="coffee.html">Coffee</a>
+                <a href="equipment.html">Equipment</a>
+                <a href="events.html">Events</a>
+                <a href="offers.html">Offers</a>
+                <a class="active" href="cart.html">
+                    Cart <span class="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+
+    <section class="page-hero">
+        <div class="container">
+
+            <span class="eyebrow">Shopping cart</span>
+
+            <h1>Your coffee basket.</h1>
+
+            <p>
+                This prototype demonstrates the future checkout journey.
+                Product selections are represented for interface testing.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container">
+
+            <div class="form">
+
+                <div id="cart-list"></div>
+
+                <div class="total">
+                    Total:
+                    <span id="cart-total">$0.00</span>
+                </div>
+
+                <div class="notice">
+                    <strong>Prototype note:</strong>
+                    The basket uses browser localStorage so selections remain
+                    while browsing. Payment is not processed.
+                </div>
+
+
+
+                <div class="cart-buttons">
+
+                    <button class="btn" type="button" onclick="document.querySelector('#checkout').hidden = false">
+                        Proceed to checkout
+                    </button>
+
+                    <button class="btn alt" type="button" onclick="clearCart()">
+                        Clear basket
+                    </button>
+
+                    <a class="btn alt" href="coffee.html">
+                        Continue shopping
+                    </a>
+
+                </div>
+
+
+
+                <div id="checkout" hidden>
+
+                    <h2>Checkout</h2>
+
+                    <form id="checkout-form" class="form">
+
+                        <div class="form-grid">
+
+                            <div class="field">
+                                <label for="customer-name">
+                                    Full name
+                                </label>
+
+                                <input id="customer-name" required>
+                            </div>
+
+
+                            <div class="field">
+                                <label for="customer-email">
+                                    Email
+                                </label>
+
+                                <input id="customer-email" type="email" required>
+                            </div>
+
+
+                            <div class="field full">
+                                <label for="address">
+                                    Delivery address
+                                </label>
+
+                                <textarea id="address" required></textarea>
+                            </div>
+
+
+                            <div class="field full">
+
+                                <button class="btn" type="submit">
+                                    Place prototype order
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+
+                    <p id="checkout-message" class="notice" hidden>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>Bean Boutique</h3>
+
+                    <p>
+                        Small-batch coffee, thoughtful equipment
+                        and welcoming community events.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>Explore</h3>
+
+                    <p>
+                        <a href="coffee.html">
+                            Coffee Selection
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="equipment.html">
+                            Brewing Equipment
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="events.html">
+                            Events
+                        </a>
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>Contact</h3>
+
+                    <p>21 Roast Street</p>
+                    <p>Yangon, Myanmar</p>
+
+                    <p>
+                        <a href="mailto:hello@beanboutique.com">
+                            hello@beanboutique.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Bean Boutique
+                </span>
+
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

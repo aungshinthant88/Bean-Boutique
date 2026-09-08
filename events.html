@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="Bean Boutique Coffee Shop — artisan coffee, brewing equipment, events and subscriptions.">
+
+    <title>Events & Workshops | Bean Boutique</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+
+            <a class="logo" href="index.html">
+                Bean <span>Boutique</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="coffee.html">Coffee</a>
+                <a href="equipment.html">Equipment</a>
+                <a class="active" href="events.html">Events</a>
+                <a href="offers.html">Offers</a>
+                <a href="cart.html">
+                    Cart <span class="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+
+    <section class="page-hero">
+        <div class="container">
+
+            <span class="eyebrow">Events & workshops</span>
+
+            <h1>Learn, taste and connect.</h1>
+
+            <p>
+                Register for approachable sessions led by our coffee team.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="section-head">
+                <h2>Upcoming Events & Workshops</h2>
+
+                <p>
+                    Join our friendly coffee community and learn more about
+                    tasting, brewing and roasting.
+                </p>
+            </div>
+        <div class="container grid grid-3">
+
+
+            <article class="card">
+
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+                    alt="Saturday Coffee Tasting">
+
+                <div class="card-body">
+
+                    <span class="tag">Tasting</span>
+
+                    <h3>Saturday Coffee Tasting</h3>
+
+                    <p>
+                        Compare three coffees and discover how roast
+                        and origin affect flavour.
+                    </p>
+
+                    <p>
+                        <strong>Saturday · 10:00 AM</strong>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
+                    alt="Brewing Basics">
+
+                <div class="card-body">
+
+                    <span class="tag">Class</span>
+
+                    <h3>Brewing Basics</h3>
+
+                    <p>
+                        Learn grind size, water temperature and simple
+                        brewing techniques.
+                    </p>
+
+                    <p>
+                        <strong>Wednesday · 4:00 PM</strong>
+                    </p>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
+                    alt="Meet the Roaster">
+
+                <div class="card-body">
+
+                    <span class="tag">Meet-up</span>
+
+                    <h3>Meet the Roaster</h3>
+
+                    <p>
+                        Ask questions about sourcing, roasting and
+                        creating seasonal blends.
+                    </p>
+
+                    <p>
+                        <strong>Friday · 6:30 PM</strong>
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-head">
+
+                <h2>Register by email</h2>
+
+                <p>
+                    Complete the form and your email app will open
+                    with the registration details.
+                </p>
+
+            </div>
+
+
+            <form class="form" id="event-form">
+
+                <div class="form-grid">
+
+
+                    <div class="field">
+
+                        <label for="first">
+                            First name
+                        </label>
+
+                        <input id="first" name="first_name" required>
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="last">
+                            Last name
+                        </label>
+
+                        <input id="last" name="last_name" required>
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="email">
+                            Email address
+                        </label>
+
+                        <input id="email" name="email" type="email" required>
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="event">
+                            Event
+                        </label>
+
+                        <select id="event" name="event">
+
+                            <option>
+                                Saturday Coffee Tasting
+                            </option>
+
+                            <option>
+                                Brewing Basics
+                            </option>
+
+                            <option>
+                                Meet the Roaster
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="field full">
+
+                        <button class="btn" type="submit">
+                            Submit registration
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p id="event-message" class="notice" hidden></p>
+
+            </form>
+
+        </div>
+    </section>
+
+    <section class="community section">
+        <div class="container">
+
+
+            <div class="section-head">
+                <span class="eyebrow">Our Community</span>
+
+                <h2>Follow Bean Boutique</h2>
+
+                <p>
+                    Follow our coffee community for new coffee arrivals,
+                    brewing tips, upcoming workshops and photos from our events.
+                </p>
+            </div>
+
+            <div class="social-widget">
+
+
+                <div class="social-card">
+
+                    <div class="social-icon instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                    <h3>Instagram</h3>
+
+                    <p>
+                        Discover our latest coffee, café and community updates.
+                    </p>
+
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="btn">
+                        <i class="fa-brands fa-instagram"></i>
+                        Follow Us
+                    </a>
+
+                </div>
+
+
+
+                <div class="social-card">
+
+                    <div class="social-icon facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+
+                    <h3>Facebook</h3>
+
+                    <p>
+                        Keep up with our latest events, announcements and news.
+                    </p>
+
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="btn">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        Visit Page
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="security section">
+        <div class="container">
+
+            <div class="security-box">
+
+                <div class="security-icon">
+                    🔒
+                </div>
+
+                <div>
+
+                    <span class="eyebrow">Secure Shopping</span>
+
+                    <h2>Your Privacy Matters</h2>
+
+                    <p>
+                        Bean Boutique is designed with customer privacy
+                        and security in mind. A production version of the
+                        website would use HTTPS encryption, secure form
+                        processing and server-side validation to protect
+                        customer information.
+                    </p>
+
+                    <div class="security-features">
+                        <span>✓ HTTPS Protection</span>
+                        <span>✓ Secure Forms</span>
+                        <span>✓ Data Privacy</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>Bean Boutique</h3>
+
+                    <p>
+                        Small-batch coffee, thoughtful equipment
+                        and welcoming community events.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>Explore</h3>
+
+                    <p>
+                        <a href="coffee.html">
+                            Coffee Selection
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="equipment.html">
+                            Brewing Equipment
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="events.html">
+                            Events
+                        </a>
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>Contact</h3>
+
+                    <p>21 Roast Street</p>
+                    <p>Yangon, Myanmar</p>
+
+                    <p>
+                        <a href="mailto:hello@beanboutique.com">
+                            hello@beanboutique.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Bean Boutique
+                </span>
+
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

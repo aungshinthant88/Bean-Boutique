@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="Bean Boutique Coffee Shop — artisan coffee, brewing equipment, events and subscriptions.">
+
+    <title>Brewing Equipment | Bean Boutique</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+
+            <a class="logo" href="index.html">
+                Bean <span>Boutique</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-label="Open navigation">
+                ☰
+            </button>
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="coffee.html">Coffee</a>
+                <a class="active" href="equipment.html">Equipment</a>
+                <a href="events.html">Events</a>
+                <a href="offers.html">Offers</a>
+                <a href="cart.html">
+                    Cart <span class="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+
+    <section class="page-hero">
+        <div class="container">
+
+            <span class="eyebrow">Brewing equipment</span>
+
+            <h1>Tools for better coffee.</h1>
+
+            <p>
+                Choose practical equipment with clear usage tips
+                for beginners and curious home brewers.
+            </p>
+
+        </div>
+    </section>
+
+
+
+    <section class="section">
+       <div class="container"> 
+        <div class="section-head"> 
+            <h2 id="equipment-heading"> 
+                Our Brewing Equipment 
+            </h2> 
+        </div>
+        <div class="container grid grid-3">
+        
+            
+            <article class="card">
+                
+                <img src="images/image_copy_8.png" alt="French press">
+
+                <div class="card-body">
+                    
+                    <h3>French Press</h3>
+
+                    <p>
+                        4-cup glass press for full-bodied 
+                    </p>
+                    <p>coffee.</p>
+                    <p>
+                        <strong>Tip:</strong>
+                        Use coarse grounds and steep for around four
+                        minutes before pressing gently.
+                    </p>
+
+                    <p class="price">
+                        $28
+                    </p>
+
+                    <button class="btn" type="button" onclick="addToCart('french-press','equipment')">
+                        Add to cart
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <img src="images/image_copy_7.png" alt="Pour-over Brewer">
+
+                <div class="card-body">
+
+                    <h3>Pour-Over Brewer</h3>
+
+                    <p>
+                        Clean, bright cups with control over extraction.
+                    </p>
+
+                    <p>
+                        <strong>Tip:</strong>
+                        Pour slowly in circles and keep the coffee bed
+                        evenly saturated.
+                    </p>
+
+                    <p class="price">
+                        $24
+                    </p>
+
+                    <button class="btn" type="button" onclick="addToCart('pour-over','equipment')">
+                        Add to cart
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <article class="card">
+
+                <img src="images/F469D87D-4757-4BDC-B29E-3B80F3368992_1_201_a.jpeg" alt="Home Espresso Machine">
+
+                <div class="card-body">
+
+                    <h3>Home Espresso Machine</h3>
+
+                    <p>
+                        Compact machine for espresso-based drinks.
+                    </p>
+
+                    <p>
+                        <strong>Tip:</strong>
+                        Warm the machine and cup first, then aim for
+                        a steady extraction.
+                    </p>
+
+                    <p class="price">
+                        $189
+                    </p>
+
+                    <button class="btn" type="button" onclick="addToCart('espresso-machine','equipment')">
+                        Add to cart
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container">
+
+            <div class="section-head">
+                <h2>Quick brewing guide</h2>
+            </div>
+
+
+            <div class="accordion">
+
+                <details open>
+                    <summary>French press</summary>
+
+                    <p>
+                        For a French press, use coarsely ground coffee and add hot water.
+                        Allow the coffee to steep for around four minutes before gently
+                        pressing the plunger down. Pour the coffee into your cup and serve immediately.
+                    </p>
+                </details>
+
+
+                <details>
+                    <summary>Pour-over</summary>
+
+                    <p>
+                        For pour-over coffee, use a medium-fine grind and rinse the filter with hot water before
+                        brewing.
+                        Add the coffee grounds and slowly pour hot water over them in circular movements,
+                        allowing the coffee to bloom before continuing the pour.
+                    </p>
+                </details>
+
+
+                <details>
+                    <summary>Espresso</summary>
+
+                    <p>
+                        For espresso, use finely ground coffee and distribute the grounds evenly in the portafilter.
+                        Tamp the coffee consistently before placing the portafilter into the machine and starting the
+                        extraction.
+                        After brewing, clean the group head to keep the espresso machine ready for the next use.
+                    </p>
+                </details>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>Bean Boutique</h3>
+
+                    <p>
+                        Small-batch coffee, thoughtful equipment
+                        and welcoming community events.
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>Explore</h3>
+
+                    <p>
+                        <a href="coffee.html">
+                            Coffee Selection
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="equipment.html">
+                            Brewing Equipment
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="events.html">
+                            Events
+                        </a>
+                    </p>
+                </div>
+
+
+                <div>
+                    <h3>Contact</h3>
+
+                    <p>21 Roast Street</p>
+                    <p>Yangon, Myanmar</p>
+
+                    <p>
+                        <a href="mailto:hello@beanboutique.com">
+                            hello@beanboutique.com
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026 Bean Boutique
+                </span>
+
+
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
