@@ -33,13 +33,14 @@ img {
 /*  Header & Navigation
    Applies to all web pages */
 .site-header {
-    background: #21160f;
+    background: rgba(33, 22, 15, 0.9);
     color: #fff;
     position: sticky;
     top: 0;
     z-index: 20;
     box-shadow: 0 4px 18px #0002;
 }
+
 /*  HEADER & NAVIGATION
    Applies to all web pages */
 .nav-wrap {
@@ -48,6 +49,7 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    
 }
 
 .logo {
@@ -71,7 +73,6 @@ img {
     justify-content: flex-end;
     transition: 0.25s;
 }
-
 .nav a {
     padding: 9px 12px;
     border-radius: 8px;
@@ -82,7 +83,7 @@ img {
 
 .nav a:hover,
 .nav a.active {
-    background: #fff2;
+    background: rgba(255, 255, 255, 0.13);
     color: #ffd58a;
 }
 
@@ -156,6 +157,8 @@ h3 {
     max-width: 680px;
     color: #f5eee8;
 }
+
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -475,6 +478,36 @@ th {
     justify-content: space-between;
     gap: 15px;
 }
+/* YouTube and TikTok icons */
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.footer-social a {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #151515;
+    color: #ffffff;
+
+    border-radius: 50%;
+    text-decoration: none;
+
+    font-size: 25px;
+
+    transition: 0.25s ease;
+}
+
+.footer-social a:hover {
+    background: #c99045;
+    color: #21160f;
+    transform: translateY(-3px);
+}
 /* Welcome Popup/ Modal */
 .modal {
     position: fixed;
@@ -502,8 +535,6 @@ th {
     max-width: 480px;
     position: relative;
 }
-
-
 .close {
     position: absolute;
     right: 15px;
@@ -511,14 +542,78 @@ th {
     text-decoration: none;
     font-size: 1.7rem;
 }
-/* Notice */
-.notice {
-    padding: 15px;
-    border-left: 5px solid #c58b3a;
-    background: #fff2dc;
-    border-radius: 8px;
-    margin: 15px 0;
+/* Popular Picks Slider*/
+.popular-slider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
 }
+
+.popular-track {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.popular-slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    justify-content: center;
+    gap: 24px;
+}
+
+.popular-card {
+    width: 350px;
+    overflow: hidden;
+}
+
+
+.popular-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+.popular-card .card-body {
+    padding: 20px;
+}
+.slider-btn {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--coffee);
+    color: var(--white);
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.slider-btn:hover {
+    background: var(--coffee2);
+    transform: scale(1.05);
+}
+
+
+.slider-btn:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
 /* Accordion */
 .accordion {
     border: 1px solid #dfcbb5;
@@ -817,11 +912,7 @@ summary {
         border-radius: 0 0 12px 12px;
     }
 
-    .nav-toggle:focus + .nav,
-    .nav:focus-within {
-        display: flex;
-        flex-direction: column;
-    }
+    
 
     .nav.open {
         display: flex;
@@ -906,5 +997,56 @@ summary {
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 600px) {
+    .footer-social {
+        gap: 12px;
+    }
 
+    .footer-social a {
+        width: 58px;
+        height: 58px;
+    }
+
+    .footer-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .footer-content p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 850px) {
+
+    .popular-slide {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .popular-card {
+        width: 100%;
+    }
+
+}
+@media (max-width: 600px) {
+
+    .popular-slide {
+        grid-template-columns: 1fr;
+        justify-content: stretch;
+    }
+
+    .popular-card {
+        width: 100%;
+    }
+
+    .popular-card img {
+        height: 230px;
+    }
+
+    .slider-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+}
 
