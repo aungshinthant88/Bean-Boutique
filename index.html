@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
                 Bean <span>Boutique</span>
             </a>
 
-            <button class="nav-toggle" type="button" aria-label="Open navigation">
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
                 ☰
             </button>
 
@@ -103,7 +105,7 @@
                 </h2>
 
                 <p>
-                    Our online prototype brings the shop's coffee catalogue,
+                    Our online coffee shop brings the coffee catalogue,
                     equipment, events and future shopping journey together.
                 </p>
 
@@ -160,126 +162,194 @@
 
 
 
-    <section class="section">
-        <div class="container">
 
-            <div class="section-head">
 
-                <span class="eyebrow">
-                    Featured
-                </span>
+<section class="section popular-picks" aria-labelledby="popular-picks-title">
 
-                <h2>
-                    Popular picks
-                </h2>
+    <div class="container">
+
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">Featured</p>
+                <h2 id="popular-picks-title">Popular picks</h2>
+            </div>
+        </div>
+
+
+        <div class="popular-slider">
+
+            <button
+                class="slider-btn slider-prev"
+                type="button"
+                aria-label="Previous popular picks">
+                &#10094;
+            </button>
+
+
+            <div class="popular-track">
+
+                
+                <div class="popular-slide">
+
+                    <article class="card popular-card">
+
+                        <img
+                            src="images/image.png"
+                            alt="House Blend coffee">
+
+                        <div class="card-body">
+
+                            <span class="tag">
+                                Best seller
+                            </span>
+
+                            <h3>House Blend</h3>
+
+                            <p>
+                                A smooth and balanced blend made
+                                for everyday coffee moments.
+                            </p>
+
+                            <p class="price">
+                                $14 / 250g
+                            </p>
+
+                            <a
+                                class="btn"
+                                href="coffee.html">
+                                View coffee
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="card popular-card">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
+                            alt="Saturday coffee tasting event">
+
+                        <div class="card-body">
+
+                            <span class="tag">
+                                Community
+                            </span>
+
+                            <h3>Saturday Tasting</h3>
+
+                            <p>
+                                Discover new flavours and meet
+                                fellow coffee lovers.
+                            </p>
+
+                            <p class="price">
+                                Next session · 10:00 AM
+                            </p>
+
+                            <a
+                                class="btn"
+                                href="events.html">
+                                Register
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+              
+                <div class="popular-slide">
+
+                    <article class="card popular-card">
+
+                        <img
+                            src="images/image_copy_8.png"
+                            alt="French Press">
+
+                        <div class="card-body">
+
+                            <span class="tag">
+                                Gear
+                            </span>
+
+                            <h3>French Press</h3>
+
+                            <p>
+                                A simple and reliable brewer.
+                            </p>
+
+                            <p class="price">
+                                $28
+                            </p>
+
+                            <a
+                                class="btn"
+                                href="equipment.html">
+                                Shop gear
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="card popular-card">
+
+                        <img
+                            src="images/image_copy.png"
+                            alt="Ethiopia Yirgacheffe coffee">
+
+                        <div class="card-body">
+
+                            <span class="tag">
+                                Single origin
+                            </span>
+
+                            <h3>Ethiopia Yirgacheffe</h3>
+
+                            <p>
+                                Floral aroma with citrus and
+                                berry notes.
+                            </p>
+
+                            <p class="price">
+                                $17 / 250g
+                            </p>
+
+                            <a
+                                class="btn"
+                                href="coffee.html">
+                                View coffee
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
 
             </div>
 
 
-            <div class="grid grid-3">
-
-
-                <article class="card">
-
-                    <img src="images/image.png" alt="House Blend">
-
-                    <div class="card-body">
-
-                        <span class="tag">
-                            Best seller
-                        </span>
-
-                        <h3>
-                            House Blend
-                        </h3>
-
-                        <p>
-                            Chocolate, caramel and toasted nuts.
-                            Best with espresso or French press.
-                        </p>
-
-                        <p class="price">
-                            $14 / 250g
-                        </p>
-
-                        <a class="btn" href="coffee.html">
-                            View coffee
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="card">
-
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
-                        alt="Saturday Tasting">
-
-                    <div class="card-body">
-
-                        <span class="tag">
-                            Community
-                        </span>
-
-                        <h3>
-                            Saturday Tasting
-                        </h3>
-
-                        <p>
-                            Compare three brewing styles with our barista.
-                        </p>
-
-                        <p class="price">
-                            Next session · 10:00 AM
-                        </p>
-
-                        <a class="btn" href="events.html">
-                            Register
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="card">
-
-                    <img src="images/image_copy_8.png" alt="French Press">
-
-                    <div class="card-body">
-
-                        <span class="tag">
-                            Gear
-                        </span>
-
-                        <h3>
-                            French Press
-                        </h3>
-
-                        <p>
-                            A simple, forgiving brewer for rich
-                            full-bodied coffee.
-                        </p>
-
-                        <p class="price">
-                            $28
-                        </p>
-
-                        <a class="btn" href="equipment.html">
-                            Shop gear
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
+            <button
+                class="slider-btn slider-next"
+                type="button"
+                aria-label="Next popular picks">
+                &#10095;
+            </button>
 
         </div>
-    </section>
+
+    </div>
+
+</section>
+
+
+
 
 
 
@@ -413,11 +483,21 @@
                     </p>
 
                     <p>
-                        <a href="mailto:hello@beanboutique.com">
-                            hello@beanboutique.com
+                        <a href="mailto:hellobeanboutique@gmail.com">
+                            hellobeanboutique@gmail.com
                         </a>
                     </p>
+                    <div class="footer-social">
 
+                        <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+
+                    </div>
                 </div>
 
             </div>
