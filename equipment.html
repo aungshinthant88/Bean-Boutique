@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 Bean <span>Boutique</span>
             </a>
 
-            <button class="nav-toggle" type="button" aria-label="Open navigation">
+            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
                 ☰
             </button>
 
@@ -62,110 +63,110 @@
 
 
     <section class="section">
-       <div class="container"> 
-        <div class="section-head"> 
-            <h2 id="equipment-heading"> 
-                Our Brewing Equipment 
-            </h2> 
-        </div>
-        <div class="container grid grid-3">
-        
-            
-            <article class="card">
-                
-                <img src="images/image_copy_8.png" alt="French press">
-
-                <div class="card-body">
-                    
-                    <h3>French Press</h3>
-
-                    <p>
-                        4-cup glass press for full-bodied 
-                    </p>
-                    <p>coffee.</p>
-                    <p>
-                        <strong>Tip:</strong>
-                        Use coarse grounds and steep for around four
-                        minutes before pressing gently.
-                    </p>
-
-                    <p class="price">
-                        $28
-                    </p>
-
-                    <button class="btn" type="button" onclick="addToCart('french-press','equipment')">
-                        Add to cart
-                    </button>
-
-                </div>
-
-            </article>
+        <div class="container">
+            <div class="section-head">
+                <h2 id="equipment-heading">
+                    Our Brewing Equipment
+                </h2>
+            </div>
+            <div class="container grid grid-3">
 
 
+                <article class="card">
 
-            <article class="card">
+                    <img src="images/image_copy_8.png" alt="French press">
 
-                <img src="images/image_copy_7.png" alt="Pour-over Brewer">
+                    <div class="card-body">
 
-                <div class="card-body">
+                        <h3>French Press</h3>
 
-                    <h3>Pour-Over Brewer</h3>
+                        <p>
+                            4-cup glass press for full-bodied
+                        </p>
+                        <p>coffee.</p>
+                        <p>
+                            <strong>Tip:</strong>
+                            Use coarse grounds and steep for around four
+                            minutes before pressing.
+                        </p>
 
-                    <p>
-                        Clean, bright cups with control over extraction.
-                    </p>
+                        <p class="price">
+                            $28
+                        </p>
 
-                    <p>
-                        <strong>Tip:</strong>
-                        Pour slowly in circles and keep the coffee bed
-                        evenly saturated.
-                    </p>
+                        <button class="btn" type="button" onclick="addToCart('french-press','equipment')">
+                            Add to cart
+                        </button>
 
-                    <p class="price">
-                        $24
-                    </p>
+                    </div>
 
-                    <button class="btn" type="button" onclick="addToCart('pour-over','equipment')">
-                        Add to cart
-                    </button>
-
-                </div>
-
-            </article>
+                </article>
 
 
 
-            <article class="card">
+                <article class="card">
 
-                <img src="images/F469D87D-4757-4BDC-B29E-3B80F3368992_1_201_a.jpeg" alt="Home Espresso Machine">
+                    <img src="images/image_copy_7.png" alt="Pour-over Brewer">
 
-                <div class="card-body">
+                    <div class="card-body">
 
-                    <h3>Home Espresso Machine</h3>
+                        <h3>Pour-Over Brewer</h3>
 
-                    <p>
-                        Compact machine for espresso-based drinks.
-                    </p>
+                        <p>
+                            Clean, bright cups with control over extraction.
+                        </p>
 
-                    <p>
-                        <strong>Tip:</strong>
-                        Warm the machine and cup first, then aim for
-                        a steady extraction.
-                    </p>
+                        <p>
+                            <strong>Tip:</strong>
+                            Pour slowly in circles and keep the coffee bed
+                            evenly saturated.
+                        </p>
 
-                    <p class="price">
-                        $189
-                    </p>
+                        <p class="price">
+                            $24
+                        </p>
 
-                    <button class="btn" type="button" onclick="addToCart('espresso-machine','equipment')">
-                        Add to cart
-                    </button>
+                        <button class="btn" type="button" onclick="addToCart('pour-over','equipment')">
+                            Add to cart
+                        </button>
 
-                </div>
+                    </div>
 
-            </article>
+                </article>
 
-        </div>
+
+
+                <article class="card">
+
+                    <img src="images/F469D87D-4757-4BDC-B29E-3B80F3368992_1_201_a.jpeg" alt="Home Espresso Machine">
+
+                    <div class="card-body">
+
+                        <h3>Home Espresso Machine</h3>
+
+                        <p>
+                            Compact machine for espresso-based drinks.
+                        </p>
+
+                        <p>
+                            <strong>Tip:</strong>
+                            Warm the machine and cup first, then aim for
+                            a steady extraction.
+                        </p>
+
+                        <p class="price">
+                            $189
+                        </p>
+
+                        <button class="btn" type="button" onclick="addToCart('espresso-machine','equipment')">
+                            Add to cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
     </section>
 
 
@@ -267,10 +268,21 @@
                     <p>Yangon, Myanmar</p>
 
                     <p>
-                        <a href="mailto:hello@beanboutique.com">
-                            hello@beanboutique.com
+                        <a href="mailto:hellobeanboutique@gmail.com">
+                            hellobeanboutique@gmail.com
                         </a>
                     </p>
+                    <div class="footer-social">
+
+                        <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+
+                    </div>
                 </div>
 
             </div>
