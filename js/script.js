@@ -1,5 +1,4 @@
-const products = [
-    {
+const products = [{
         id: "house-blend",
         name: "House Blend",
         price: 14,
@@ -61,27 +60,30 @@ const products = [
         price: 189,
         type: "equipment"
     },
+
     {
-    id: "bean-basic",
-    name: "Bean Basic Subscription",
-    price: 12,
-    type: "subscription"
-},
+        id: "bean-basic",
+        name: "Bean Basic Subscription",
+        price: 12,
+        type: "subscription"
+    },
 
-{
-    id: "origin-explorer",
-    name: "Origin Explorer Subscription",
-    price: 20,
-    type: "subscription"
-},
+    {
+        id: "origin-explorer",
+        name: "Origin Explorer Subscription",
+        price: 20,
+        type: "subscription"
+    },
 
-{
-    id: "coffee-club-plus",
-    name: "Coffee Club Plus Subscription",
-    price: 29,
-    type: "subscription"
-}
+    {
+        id: "coffee-club-plus",
+        name: "Coffee Club Plus Subscription",
+        price: 29,
+        type: "subscription"
+    }
 ];
+
+
 
 
 function getCart() {
@@ -165,20 +167,31 @@ function addToCart(id) {
 }
 
 
+
+
 function getWishlist() {
-    return JSON.parse(localStorage.getItem("beanWishlist") || "[]");
+    return JSON.parse(
+        localStorage.getItem("beanWishlist") || "[]"
+    );
 }
 
+
 function saveWishlist(wishlist) {
-    localStorage.setItem("beanWishlist", JSON.stringify(wishlist));
+    localStorage.setItem(
+        "beanWishlist",
+        JSON.stringify(wishlist)
+    );
 
     renderWishlist();
     updateWishlistButtons();
 }
 
+
 function toggleWishlist(id) {
 
-    const product = products.find(item => item.id === id);
+    const product = products.find(
+        item => item.id === id
+    );
 
     if (!product) {
         console.log("Product not found:", id);
@@ -187,13 +200,19 @@ function toggleWishlist(id) {
 
     let wishlist = getWishlist();
 
-    const exists = wishlist.some(item => item.id === id);
+    const exists = wishlist.some(
+        item => item.id === id
+    );
 
     if (exists) {
 
-        wishlist = wishlist.filter(item => item.id !== id);
+        wishlist = wishlist.filter(
+            item => item.id !== id
+        );
 
-        toast(product.name + " removed from wishlist");
+        toast(
+            product.name + " removed from wishlist"
+        );
 
     } else {
 
@@ -204,22 +223,28 @@ function toggleWishlist(id) {
             type: product.type
         });
 
-        toast(product.name + " added to wishlist");
+        toast(
+            product.name + " added to wishlist"
+        );
     }
 
     saveWishlist(wishlist);
 }
 
+
 function removeFromWishlist(id) {
 
     let wishlist = getWishlist();
 
-    wishlist = wishlist.filter(item => item.id !== id);
+    wishlist = wishlist.filter(
+        item => item.id !== id
+    );
 
     saveWishlist(wishlist);
 
     toast("Removed from wishlist");
 }
+
 
 function clearWishlist() {
 
@@ -228,30 +253,44 @@ function clearWishlist() {
     toast("Wishlist cleared");
 }
 
+
 function updateWishlistButtons() {
 
     const wishlist = getWishlist();
 
-    document.querySelectorAll(".wishlist-btn").forEach(button => {
+    document
+        .querySelectorAll(".wishlist-btn")
+        .forEach(button => {
 
-        const id = button.dataset.id;
+            const id = button.dataset.id;
 
-        const saved = wishlist.some(item => item.id === id);
+            const saved = wishlist.some(
+                item => item.id === id
+            );
 
-        if (saved) {
-            button.textContent = "♥ Added to Wishlist";
-            button.classList.add("added");
-        } else {
-            button.textContent = "♡ Add to Wishlist";
-            button.classList.remove("added");
-        }
+            if (saved) {
 
-    });
+                button.textContent =
+                    "♥ Added to Wishlist";
+
+                button.classList.add("added");
+
+            } else {
+
+                button.textContent =
+                    "♡ Add to Wishlist";
+
+                button.classList.remove("added");
+            }
+
+        });
 }
+
 
 function renderWishlist() {
 
-    const container = document.querySelector("#wishlist-items");
+    const container =
+        document.querySelector("#wishlist-items");
 
     if (!container) {
         return;
@@ -270,26 +309,30 @@ function renderWishlist() {
         return;
     }
 
-    container.innerHTML = wishlist.map(item => `
-        <div class="wishlist-item">
+    container.innerHTML = wishlist
+        .map(item => `
+            <div class="wishlist-item">
 
-            <div>
-                <h3>${item.name}</h3>
-                <p>$${item.price}</p>
+                <div>
+                    <h3>${item.name}</h3>
+                    <p>$${item.price}</p>
+                </div>
+
+                <button
+                    type="button"
+                    class="remove-wishlist"
+                    onclick="removeFromWishlist('${item.id}')">
+                    Remove
+                </button>
+
             </div>
-
-            <button
-                type="button"
-                class="remove-wishlist"
-                onclick="removeFromWishlist('${item.id}')">
-                Remove
-            </button>
-
-        </div>
-    `).join("");
+        `)
+        .join("");
 }
 
+
 function changeQty(id, difference) {
+
     let cart = getCart();
 
     let item = cart.find(
@@ -303,6 +346,7 @@ function changeQty(id, difference) {
     item.qty += difference;
 
     if (item.qty < 1) {
+
         cart = cart.filter(
             product => product.id !== id
         );
@@ -314,6 +358,7 @@ function changeQty(id, difference) {
 
 
 function clearCart() {
+
     saveCart([]);
     renderCart();
 
@@ -322,8 +367,12 @@ function clearCart() {
 
 
 function renderCart() {
-    let list = document.querySelector("#cart-list");
-    let total = document.querySelector("#cart-total");
+
+    let list =
+        document.querySelector("#cart-list");
+
+    let total =
+        document.querySelector("#cart-total");
 
     if (!list) {
         return;
@@ -332,6 +381,7 @@ function renderCart() {
     let cart = getCart();
 
     if (!cart.length) {
+
         list.innerHTML = `
             <div class="notice">
                 <strong>Your basket is empty.</strong>
@@ -340,7 +390,9 @@ function renderCart() {
             </div>
         `;
 
-        total.textContent = "$0.00";
+        if (total) {
+            total.textContent = "$0.00";
+        }
 
         return;
     }
@@ -359,11 +411,13 @@ function renderCart() {
                         <h3>${item.name}</h3>
 
                         <p>
-                           ${item.type === "equipment"
-                            ? "Equipment"
-                            : item.type === "subscription"
-                            ? "Subscription"
-                            : "Coffee"}
+                            ${
+                                item.type === "equipment"
+                                    ? "Equipment"
+                                    : item.type === "subscription"
+                                    ? "Subscription"
+                                    : "Coffee"
+                            }
                         </p>
                     </div>
 
@@ -371,8 +425,7 @@ function renderCart() {
 
                         <button
                             type="button"
-                            onclick="changeQty('${item.id}', -1)"
-                        >
+                            onclick="changeQty('${item.id}', -1)">
                             −
                         </button>
 
@@ -382,8 +435,7 @@ function renderCart() {
 
                         <button
                             type="button"
-                            onclick="changeQty('${item.id}', 1)"
-                        >
+                            onclick="changeQty('${item.id}', 1)">
                             +
                         </button>
 
@@ -398,71 +450,98 @@ function renderCart() {
         })
         .join("");
 
-    total.textContent = "$" + sum.toFixed(2);
+    if (total) {
+        total.textContent =
+            "$" + sum.toFixed(2);
+    }
 }
-
 
 function setup() {
 
 
-    document
-        .querySelector(".nav-toggle")
-        ?.addEventListener("click", () => {
+    const navToggle =
+        document.querySelector(".nav-toggle");
 
-            document
-                .querySelector(".nav")
-                ?.classList.toggle("open");
+    const nav =
+        document.querySelector(".nav");
 
-        });
+    if (navToggle && nav) {
 
+        navToggle.addEventListener(
+            "click",
+            function () {
 
+                nav.classList.toggle("open");
 
-    updateCartCount();
-    renderCart();
+                const isOpen =
+                    nav.classList.contains("open");
 
-
-
-    const search = document.querySelector(
-        "#coffee-search"
-    );
-
-    if (search) {
-
-        search.addEventListener(
-            "input",
-            () => {
-
-                let query = search.value.toLowerCase();
-                let visibleProducts = 0;
-
-                document
-                    .querySelectorAll("[data-name]")
-                    .forEach(product => {
-
-                        let matches =
-                            product.dataset.name.includes(query);
-
-                        product.hidden = !matches;
-
-                        if (matches) {
-                            visibleProducts++;
-                        }
-
-                    });
-
-                let emptyMessage =
-                    document.querySelector("#search-empty");
-
-                if (emptyMessage) {
-                    emptyMessage.hidden =
-                        visibleProducts > 0;
-                }
+                navToggle.setAttribute(
+                    "aria-label",
+                    isOpen ?
+                    "Close navigation" :
+                    "Open navigation"
+                );
 
             }
         );
 
     }
 
+
+    updateCartCount();
+
+    renderCart();
+
+
+    const search =
+        document.querySelector("#coffee-search");
+
+    if (search) {
+
+        search.addEventListener(
+            "input",
+            function () {
+
+                const term =
+                    search.value
+                    .toLowerCase()
+                    .trim();
+
+                const items =
+                    document.querySelectorAll(
+                        ".searchable-item"
+                    );
+
+                items.forEach(
+                    function (item) {
+
+                        const searchText =
+                            item
+                            .getAttribute(
+                                "data-search"
+                            )
+                            .toLowerCase();
+
+                        if (
+                            searchText.includes(term)
+                        ) {
+
+                            item.style.display = "";
+
+                        } else {
+
+                            item.style.display = "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
 
 
     const eventForm =
@@ -474,20 +553,24 @@ function setup() {
             "submit",
             event => {
 
-                event.preventDefault();
+                
 
                 if (!eventForm.checkValidity()) {
+
                     eventForm.reportValidity();
+
                     return;
                 }
 
                 const message =
-                    document.querySelector("#event-message");
+                    document.querySelector(
+                        "#event-message"
+                    );
 
                 message.hidden = false;
 
                 message.textContent =
-                    "Registration received! This prototype is ready to send the details by email.";
+                    "Registration received!";
 
                 eventForm.reset();
 
@@ -497,45 +580,60 @@ function setup() {
     }
 
 
+   const checkout =
+    document.querySelector("#checkout-form");
 
-    const checkout =
-        document.querySelector("#checkout-form");
+if (checkout) {
 
-    if (checkout) {
+    checkout.addEventListener(
+        "submit",
+        event => {
 
-        checkout.addEventListener(
-            "submit",
-            event => {
+            event.preventDefault();
 
-                event.preventDefault();
+            if (!getCart().length) {
 
-                if (!getCart().length) {
-                    toast("Your basket is empty");
-                    return;
-                }
-
-                if (!checkout.checkValidity()) {
-                    checkout.reportValidity();
-                    return;
-                }
-
-                const message =
-                    document.querySelector("#checkout-message");
-
-                message.hidden = false;
-
-                message.textContent =
-                    "Prototype order completed. No payment was processed.";
-
+                toast("Thank You!");
+                return;
             }
-        );
 
-    }
+            if (!checkout.checkValidity()) {
 
+                checkout.reportValidity();
+                return;
+            }
+
+            const message =
+                document.querySelector("#checkout-message");
+
+
+            localStorage.removeItem("beanCart");
+
+
+            checkout.reset();
+
+
+            updateCartCount();
+
+
+            renderCart();
+
+
+            message.hidden = false;
+
+            message.textContent =
+                "Order completed.";
+
+        }
+    );
+
+}
 
 
     document
-        .querySelectorAll("[data-close-welcome]")
+        .querySelectorAll(
+            "[data-close-welcome]"
+        )
         .forEach(element => {
 
             element.addEventListener(
@@ -543,8 +641,10 @@ function setup() {
                 () => {
 
                     document
-                        .querySelector("#welcome")
-                        ?.classList.remove("visible");
+                        .querySelector("#welcome") 
+                        ?.classList.remove(
+                            "visible"
+                        );
 
                     localStorage.setItem(
                         "beanWelcomeSeen",
@@ -558,24 +658,122 @@ function setup() {
 
 
     if (
-        !localStorage.getItem("beanWelcomeSeen") &&
+        !localStorage.getItem(
+            "beanWelcomeSeen"
+        ) &&
         document.querySelector("#welcome")
     ) {
 
         setTimeout(
             () => {
+
                 document
                     .querySelector("#welcome")
-                    .classList.add("visible");
+                    .classList.add(
+                        "visible"
+                    );
+
             },
             900
         );
 
     }
 
+
     renderWishlist();
+
     updateWishlistButtons();
+
+
+    const popularTrack =
+        document.querySelector(
+            ".popular-track"
+        );
+
+    const popularSlides =
+        document.querySelectorAll(
+            ".popular-slide"
+        );
+
+    const popularPrev =
+        document.querySelector(
+            ".slider-prev"
+        );
+
+    const popularNext =
+        document.querySelector(
+            ".slider-next"
+        );
+
+    let popularSlideIndex = 0;
+
+
+    if (
+        popularTrack &&
+        popularSlides.length > 0 &&
+        popularPrev &&
+        popularNext
+    ) {
+
+        function showPopularSlide(index) {
+
+            if (index < 0) {
+
+                popularSlideIndex =
+                    popularSlides.length - 1;
+
+            } else if (
+                index >= popularSlides.length
+            ) {
+
+                popularSlideIndex = 0;
+
+            } else {
+
+                popularSlideIndex = index;
+
+            }
+
+            popularTrack.scrollTo({
+
+                left: popularSlideIndex *
+                    popularTrack.clientWidth,
+
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        popularNext.addEventListener(
+            "click",
+            function () {
+
+                showPopularSlide(
+                    popularSlideIndex + 1
+                );
+
+            }
+        );
+
+
+        popularPrev.addEventListener(
+            "click",
+            function () {
+
+                showPopularSlide(
+                    popularSlideIndex - 1
+                );
+
+            }
+        );
+
+    }
+
 }
+
+
 
 document.addEventListener(
     "DOMContentLoaded",
