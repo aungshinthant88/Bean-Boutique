@@ -582,24 +582,17 @@ th {
 }
 .slider-btn {
     flex-shrink: 0;
-
     width: 42px;
     height: 42px;
-
     border: none;
     border-radius: 50%;
-
     background: var(--coffee);
     color: var(--white);
-
     font-size: 22px;
-
     cursor: pointer;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     transition: 0.2s ease;
 }
 
@@ -851,7 +844,7 @@ summary {
     background: #fff;
     border-radius: 10px;
 }
-/* Fix Starability rating text */
+/* Fix Starability rating */
 .starability-basic legend {
     white-space: nowrap;
     width: auto;
@@ -859,7 +852,7 @@ summary {
     font-size: 18px;
     margin-bottom: 8px;
 }
-/* Make all coffee cards equal height */
+/* Coffee cards */
 #coffee-grid {
     align-items: stretch;
 }
@@ -875,7 +868,6 @@ summary {
     height: 100%;
 }
 
-/* Keep the price and rating buttons aligned */
 #coffee-grid .card-body .price {
     margin-top: auto;
 }
@@ -911,9 +903,7 @@ summary {
         padding: 12px;
         border-radius: 0 0 12px 12px;
     }
-
     
-
     .nav.open {
         display: flex;
         flex-direction: column;
@@ -1049,4 +1039,3 @@ summary {
     }
 
 }
-
