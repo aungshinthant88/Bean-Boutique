@@ -553,7 +553,7 @@ function setup() {
             "submit",
             event => {
 
-                
+
 
                 if (!eventForm.checkValidity()) {
 
@@ -578,56 +578,99 @@ function setup() {
         );
 
     }
+    const signupForm =
+        document.querySelector("#signup-form");
 
+    if (signupForm) {
 
-   const checkout =
-    document.querySelector("#checkout-form");
+        signupForm.addEventListener(
+            "submit",
+            event => {
 
-if (checkout) {
+                event.preventDefault();
 
-    checkout.addEventListener(
-        "submit",
-        event => {
+                if (!signupForm.checkValidity()) {
 
-            event.preventDefault();
+                    signupForm.reportValidity();
 
-            if (!getCart().length) {
+                    return;
+                }
 
-                toast("Thank You!");
-                return;
+                const email =
+                    document.querySelector("#coffee-email").value;
+
+                localStorage.setItem(
+                    "beanSubscriber",
+                    email
+                );
+
+                const message =
+                    document.querySelector("#signup-message");
+
+                if (message) {
+
+                    message.hidden = false;
+
+                    message.textContent =
+                        "Thank you for subscribing to Bean Boutique!";
+                }
+
+                signupForm.reset();
+
             }
+        );
 
-            if (!checkout.checkValidity()) {
+    }
 
-                checkout.reportValidity();
-                return;
+
+    const checkout =
+        document.querySelector("#checkout-form");
+
+    if (checkout) {
+
+        checkout.addEventListener(
+            "submit",
+            event => {
+
+                event.preventDefault();
+
+                if (!getCart().length) {
+
+                    toast("Thank You!");
+                    return;
+                }
+
+                if (!checkout.checkValidity()) {
+
+                    checkout.reportValidity();
+                    return;
+                }
+
+                const message =
+                    document.querySelector("#checkout-message");
+
+
+                localStorage.removeItem("beanCart");
+
+
+                checkout.reset();
+
+
+                updateCartCount();
+
+
+                renderCart();
+
+
+                message.hidden = false;
+
+                message.textContent =
+                    "Order completed.";
+
             }
+        );
 
-            const message =
-                document.querySelector("#checkout-message");
-
-
-            localStorage.removeItem("beanCart");
-
-
-            checkout.reset();
-
-
-            updateCartCount();
-
-
-            renderCart();
-
-
-            message.hidden = false;
-
-            message.textContent =
-                "Order completed.";
-
-        }
-    );
-
-}
+    }
 
 
     document
@@ -779,4 +822,3 @@ document.addEventListener(
     "DOMContentLoaded",
     setup
 );
-
